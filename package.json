@@ -1,23 +1,23 @@
 {
-  "name": "jsonresume-theme-standard-resume",
-  "version": "1.0.3",
-  "description": "JSON Resume Theme based on Standard Resume",
-  "author": "Ema Suriano",
+  "name": "jsonresume-theme-standard-resume-de",
+  "version": "1.0.0",
+  "description": "JSON Resume Theme based on Standard Resume (german translation)",
+  "author": "Henning Krone",
   "scripts": {
     "html": "node dev/html",
     "pdf": "node dev/pdf"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmaSuriano/jsonresume-theme-standard-resume"
+    "url": "https://github.com/hkrone74/jsonresume-theme-standard-resume-de"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": "^4.0.12",
+    "handlebars-intl": "^1.1.2",
     "helper-date": "^1.0.1"
   },
   "devDependencies": {
-    "btoa": "^1.2.1",
-    "puppeteer": "^2.0.0"
+    "btoa": "^1.2.1"
   }
 }

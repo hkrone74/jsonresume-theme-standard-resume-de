@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var Handlebars = require('handlebars');
+var HandlebarsIntl = require('handlebars-intl')
 
 function render(resume) {
   var css = fs.readFileSync(__dirname + '/style.css', 'utf-8');
@@ -8,6 +9,7 @@ function render(resume) {
   var partialsDir = path.join(__dirname, 'partials');
   var filenames = fs.readdirSync(partialsDir);
   Handlebars.registerHelper('date', require('helper-date'));
+  HandlebarsIntl.registerWith(Handlebars);
 
   filenames.forEach(function(filename) {
     var matches = /^([^.]+).hbs$/.exec(filename);
@@ -20,9 +22,14 @@ function render(resume) {
     Handlebars.registerPartial(name, template);
   });
 
+  var intlData = {
+      locales: 'de-DE'
+  }
+
   return Handlebars.compile(tpl)({
     css: css,
     resume: resume,
+    data: { intl: intlData}
   });
 }
 

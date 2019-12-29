@@ -1,6 +1,6 @@
 {{#if resume.publications.length}}
 <section>
-	<h2>Projects</h2>
+	<h2>Projekte</h2>
 	{{#each resume.publications}}
 	<span class="headline">
 		{{#if website}}
@@ -11,7 +11,7 @@
 	</span>
 	{{#if releaseDate}}
 	<p class="grey">
-		{{ date releaseDate "MMM, YYYY"}}
+		{{formatDate releaseDate month="short" year="numeric"}}
 	</p>
 	{{/if}}
 	{{#if summary}}

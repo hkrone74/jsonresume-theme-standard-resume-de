@@ -1,4 +1,6 @@
-# JSON Resume Theme Standard Resume
+# JSON Resume Theme Standard Resume (DE)
+
+(German translation of https://www.npmjs.com/package/jsonresume-theme-standard-resume)
 
 > JSON Resume theme imitating the amazing style from [Standard Resume](https://standardresume.co/r/jeffleu)
 

@@ -1,6 +1,6 @@
 {{#if resume.work.length}}
 <section>
-	<h2>Work Experience</h2>
+	<h2>Berufserfahrung</h2>
 	{{#each resume.work}}
 	<div>
 		<span class="headline">
@@ -15,14 +15,13 @@
 			{{position}} |
 			{{/if}}
 			{{#if startDate}}
-			{{date startDate "MMM, YYYY"}}
-
+			{{formatDate startDate month="short" year="numeric"}}
 
 			{{/if}}
 			{{#if endDate}}
-			- {{date endDate "MMM, YYYY"}}
+			- {{formatDate endDate month="short" year="numeric"}}
 			{{else}}
-			- Current
+			- heute
 			{{/if}}
 		</p>
 		{{#if summary}}
